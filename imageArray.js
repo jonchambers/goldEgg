@@ -4,6 +4,7 @@ let imgs = []
 let x = []
 let y = []
 
+let redSquare
 
 let imageSpeed = []
 
@@ -17,6 +18,7 @@ let name = 0
 let randImage = []
 
 function preload(){
+	redSquare = loadImage('images/Red-Square-Moscow.jpg')
 	for(let i = 0; i<6; i++){
 		imgs[i] = loadImage('images/' + namesArray[i] + '.png')
 		
@@ -53,6 +55,7 @@ function randImageName(){
 
 function draw(){
 	background(255)
+	image(redSquare, windowWidth/2, windowHeight/2, windowWidth, windowHeight)
 	for(let i= 0; i < x.length; i++){
 		image(imgs[randImage[i]], x[i], y[i], 300, 300)
 		y[i] = y[i] + imageSpeed[i]
