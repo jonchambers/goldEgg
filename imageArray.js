@@ -34,7 +34,7 @@ canvas.position(0, 0)
 
 // randomButton = createButton('Random Image and Name')
 // randomButton.mousePressed(randImageName)
-
+pixelDensity(1) 
 //print(imgs)
 imageMode(CENTER)
 
