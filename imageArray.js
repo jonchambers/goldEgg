@@ -18,7 +18,7 @@ let name = 0
 let randImage = []
 
 function preload(){
-	redSquare = loadImage('images/Red-Square-Moscow.jpg')
+	redSquare = loadImage('images/red-squarePNG.png')
 	for(let i = 0; i<6; i++){
 		imgs[i] = loadImage('images/' + namesArray[i] + '.png')
 		
@@ -38,7 +38,7 @@ canvas.position(0, 0)
 //print(imgs)
 imageMode(CENTER)
 
-for(let i = 0; i<50; i++){
+for(let i = 0; i<30; i++){
 		x.push(random(0, windowWidth))
 		y.push(random(0, windowHeight))
 		imageSpeed.push(random(2, 6))
@@ -54,7 +54,7 @@ function randImageName(){
 
 
 function draw(){
-	background(255)
+	background(random(255),random(255),random(255))
 	image(redSquare, windowWidth/2, windowHeight/2, windowWidth, windowHeight)
 	for(let i= 0; i < x.length; i++){
 		image(imgs[randImage[i]], x[i], y[i], 300, 300)
